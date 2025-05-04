@@ -1,0 +1,4 @@
+C:\Users\mille\Documents\Faculdade\Segundo Trimestre\Desenvolvimento Web com .NET e Bases de Dados\TP1\exercicio-2\obj\Debug\net9.0\exercicio-2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mille\Documents\Faculdade\Segundo Trimestre\Desenvolvimento Web com .NET e Bases de Dados\TP1\exercicio-2\obj\Debug\net9.0\exercicio-2.AssemblyInfoInputs.cache
+C:\Users\mille\Documents\Faculdade\Segundo Trimestre\Desenvolvimento Web com .NET e Bases de Dados\TP1\exercicio-2\obj\Debug\net9.0\exercicio-2.AssemblyInfo.cs
+C:\Users\mille\Documents\Faculdade\Segundo Trimestre\Desenvolvimento Web com .NET e Bases de Dados\TP1\exercicio-2\obj\Debug\net9.0\exercicio-2.csproj.CoreCompileInputs.cache
