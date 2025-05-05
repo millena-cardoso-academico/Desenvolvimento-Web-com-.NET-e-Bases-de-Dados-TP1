@@ -25,7 +25,11 @@ public class AddEventModel : PageModel
         }
 
         OnEventoCadastrado?.Invoke(NovoEvento);
-        MensagemSucesso = $"Evento '{NovoEvento.Titulo}' cadastrado com sucesso!";
+        
+        MensagemSucesso = $"Evento '{NovoEvento.Titulo}' cadastrado com sucesso para {NovoEvento.Data:d} em {NovoEvento.Local}";
+        
+        NovoEvento = new Event();
+        
         return Page();
     }
 }
