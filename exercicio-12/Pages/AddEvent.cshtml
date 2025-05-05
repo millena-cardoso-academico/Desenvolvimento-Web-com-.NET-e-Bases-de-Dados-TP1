@@ -1,0 +1,34 @@
+@page
+@model exercicio_12.Pages.AddEventModel
+@{
+    ViewData["Title"] = "Cadastrar Evento";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="NovoEvento.Titulo"></label>
+        <input asp-for="NovoEvento.Titulo" class="form-control">
+        <span asp-validation-for="NovoEvento.Titulo" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="NovoEvento.Data"></label>
+        <input asp-for="NovoEvento.Data" class="form-control">
+        <span asp-validation-for="NovoEvento.Data" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="NovoEvento.Local"></label>
+        <input asp-for="NovoEvento.Local" class="form-control">
+        <span asp-validation-for="NovoEvento.Local" class="text-danger"></span>
+    </div>
+    
+    <button type="submit" class="btn btn-primary mt-3">Cadastrar</button>
+</form>
+
+@if (Model.MensagemSucesso != null)
+{
+    <div class="alert alert-success mt-3">@Model.MensagemSucesso</div>
+}

@@ -1,22 +1,21 @@
-﻿using System;
+using exercicio_12.Models;
+using exercicio_12.Pages;
 
-class Program
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddRazorPages();
+
+// Configuração do delegate
+AddEventModel.OnEventoCadastrado = evento =>
 {
-    static void Main()
-    {
-        Func<string, string, string> concatenar = (nome, sobrenome) => $"{nome} {sobrenome}";
-        Func<string, string, string> pipeline = concatenar
-            .AndThen(s => s.ToUpper())
-            .AndThen(s => s.Replace(" ", ""));
+    Console.WriteLine($"EVENTO CADASTRADO:");
+    Console.WriteLine($"Título: {evento.Titulo}");
+    Console.WriteLine($"Data: {evento.Data}");
+    Console.WriteLine($"Local: {evento.Local}");
+    Console.WriteLine(new string('-', 30));
+};
 
-        Console.WriteLine(pipeline("João", "Silva"));
-    }
-}
+var app = builder.Build();
 
-public static class FuncExtensions
-{
-    public static Func<T1, T2, TResult> AndThen<T1, T2, TResult>(this Func<T1, T2, TResult> func, Func<TResult, TResult> next)
-    {
-        return (x, y) => next(func(x, y));
-    }
-}
+app.UseStaticFiles();
+app.MapRazorPages();
+app.Run();
